@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason's Enhanced 3-Week 1550+ SAT Sprint Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Warm neutral background */
+        }
+        .task-card.completed {
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+        .task-card.completed .activity-title,
+        .task-card.completed .details-text {
+            text-decoration: line-through;
+        }
+        .nav-tab {
+            transition: all 0.3s ease;
+        }
+        .nav-tab.active {
+            background-color: #3b82f6; /* Accent color */
+            color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .details-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+            padding: 0 1rem;
+        }
+        .details-content.open {
+            max-height: 500px;
+            padding: 1rem 1rem 0.5rem;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-8">
+            <h1 class="text-3xl sm:text-4xl font-bold text-gray-900">🎯 Jason's Enhanced 3-Week SAT Sprint Plan</h1>
+            <p class="mt-2 text-lg text-gray-600">Your path from 1500 to 1550+ for the November 8th SAT.</p>
+        </header>
+
+        <div class="max-w-3xl mx-auto mb-8 bg-blue-50 border-l-4 border-blue-500 text-blue-800 p-4 rounded-md" role="alert">
+            <p class="font-bold text-lg">🧠 Foundational Habits for Peak Performance (Daily Goal)</p>
+            <ul class="mt-2 list-disc list-inside text-blue-700">
+                <li><strong>Consistent Sleep:</strong> Aim for 8-9 hours every night. This is non-negotiable for memory consolidation and peak focus.</li>
+                <li><strong>Brain-Focused Nutrition & Hydration:</strong> Fuel your brain for this sprint. Avoid junk food before study blocks and stay consistently hydrated.</li>
+            </ul>
+        </div>
+
+
+        <nav class="flex justify-center mb-8 bg-white rounded-full shadow-sm p-2 max-w-md mx-auto">
+            <button id="tab-week1" class="nav-tab active w-1/3 py-2 px-4 rounded-full font-semibold text-gray-600">Week 1</button>
+            <button id="tab-week2" class="nav-tab w-1/3 py-2 px-4 rounded-full font-semibold text-gray-600">Week 2</button>
+            <button id="tab-week3" class="nav-tab w-1/3 py-2 px-4 rounded-full font-semibold text-gray-600">Week 3</button>
+        </nav>
+
+        <main id="plan-container">
+        </main>
+    </div>
+
+    <script>
+        const studyPlan = {
+            week1: {
+                title: "Week 1: Diagnosis & Fix-It Phase",
+                intro: "This week is dedicated to aggressive diagnosis and immediately repairing any remaining conceptual weaknesses. The goal is to identify your 3-5 critical error patterns using high-level analysis tools and then eliminate them with targeted drills.",
+                days: [
+                    { day: 1, date: "Fri, Oct 17", activity: "Diagnostic Test (Timed): Full Official Bluebook Test", resource: "College Board Bluebook App", rationale: "Establish a fresh baseline score to measure the 50-point jump. Do this under strict conditions.", time: "2.5 hours" },
+                    { day: 2, date: "Sat, Oct 18", activity: "1600.io Error Analysis: Review ALL missed/unsure questions", resource: "1600.io FREE Trial Explanations", rationale: "Crucial Step: Identify the exact trap, strategy, or conceptual flaw for every missed/unsure question. <strong>When logging errors, categorize each one: Type A (Careless Error), Type B (Concept Gap), or Type C (Strategy Error). This will reveal your true weaknesses.</strong>", time: "1.5 - 2 hours" },
+                    { day: 3, date: "Sun, Oct 19", activity: "Math Content Blitz: Drill 40 Advanced Math questions (2 weakest topics)", resource: "Khan Academy (Advanced Level Practice)", rationale: "Immediate, targeted content repair. Focus on multi-step and high-level concepts like complex numbers or circle equations.", time: "1.5 hours" },
+                    { day: 4, date: "Mon, Oct 20", activity: "R&W Content Blitz: Drill 40 Advanced R&W questions (2 weakest types)", resource: "Erica Meltzer Guide / Khan Academy", rationale: "Fix the technical rules (Grammar/Punctuation) where 100% accuracy is required for the 800-score range.", time: "1.5 hours" },
+                    { day: 5, date: "Tue, Oct 21", activity: "Execution Drill (R&W): 2 full Modules (back-to-back, timed)", resource: "Official Bluebook Test (unused modules)", rationale: "Practice sustaining high accuracy and applying R&W elimination logic under pressure.", time: "1.5 hours" },
+                    { day: 6, date: "Wed, Oct 22", activity: "Execution Drill (Math): 2 full Modules (back-to-back, timed)", resource: "Official Bluebook Test (unused modules)", rationale: "Practice hitting the hard Module 2 perfectly; force speed and double-checking techniques.", time: "1.5 hours" },
+                    { day: 7, date: "Thu, Oct 23", activity: "Desmos & Formula Review: Practice high-speed strategies", resource: "1600.io Free Desmos Videos / Error Journal", rationale: "Solidify high-speed strategies and your best safety net techniques (plugging in, checking units).", time: "45 - 60 minutes" }
+                ]
+            },
+            week2: {
+                title: "Week 2: Intensification & Execution",
+                intro: "The goal this week is to push your accuracy with challenging material and achieve consistent high scores. You'll stress-test your skills and practice maintaining perfect timing on the crucial adaptive second modules.",
+                days: [
+                    { day: 8, date: "Fri, Oct 24", activity: "FULL Practice Test (Timed): Benchmark after content review", resource: "College Board Bluebook App", rationale: "Benchmark your progress after Week 1's surgical content review. <strong>Simulate official test day conditions perfectly: same wake-up time, same breakfast, no distractions, and only official break times.</strong>", time: "2.5 hours" },
+                    { day: 9, date: "Sat, Oct 25", activity: "Error Analysis: Check if Week 1's flaws are gone", resource: "1600.io/PrepPros Free Explanations", rationale: "Ensure the simple conceptual flaws are gone. <strong>Use your error categories (A, B, C) to confirm that 'Type B' concept gaps are disappearing.</strong> If you miss a content question now, treat it as a major alarm.", time: "1.5 - 2 hours" },
+                    { day: 10, date: "Sun, Oct 26", activity: "Hard Math Drill: 30 Expert-level questions (multi-step/novel)", resource: "PrepPros Trial Questions (Expert sets)", rationale: "Stress-test your execution with non-official, hyper-challenging material.", time: "1.5 hours" },
+                    { day: 11, date: "Mon, Oct 27", activity: "Hard R&W Drill: 30 Expert-level questions (complex inference/rhetoric)", resource: "PrepPros Trial Questions / Erica Meltzer Practice", rationale: "Build mastery in highly nuanced R&W question types that separate the 750 from the 800.", time: "1.5 hours" },
+                    { day: 12, date: "Tue, Oct 28", activity: "Execution Drill (Math): 1 Math Module 2 (Timed)", resource: "Official Bluebook Test (unused module)", rationale: "Maintain perfect timing and accuracy on the crucial adaptive module.", time: "1.5 hours" },
+                    { day: 13, date: "Wed, Oct 29", activity: "Execution Drill (R&W): 1 R&W Module 2 (Timed)", resource: "Official Bluebook Test (unused module)", rationale: "Practice fast, flawless reading and elimination logic.", time: "1.5 hours" },
+                    { day: 14, date: "Thu, Oct 30", activity: "Rest & Strategy Review: Review Action Plan section", resource: "Error Journal (Primary Resource)", rationale: "Consolidation: No new learning; only reinforcing correct habits and self-correction strategies.", time: "30 - 45 minutes" }
+                ]
+            },
+            week3: {
+                title: "Week 3: Final Benchmark & Test Week Prep",
+                intro: "The final week is all about building confidence, running a final simulation, and maximizing rest to ensure peak performance on test day. The focus shifts from learning to polishing and mental preparation.",
+                days: [
+                    { day: 15, date: "Fri, Oct 31", activity: "Final FULL Practice Test (Timed): Last simulation", resource: "College Board Bluebook App", rationale: "Final Benchmark: This is your last chance for a full-test assessment. <strong>This is your final dress rehearsal. Execute a full test day simulation, from the moment you wake up to your post-test snack.</strong>", time: "2.5 hours" },
+                    { day: 16, date: "Sat, Nov 1", activity: "Final Surgical Review: Review 2-3 toughest questions only", resource: "1600.io/PrepPros Explanations", rationale: "Analyze why those final few problems caused trouble. Do not panic over minor issues.", time: "1 hour" },
+                    { day: 17, date: "Sun, Nov 2", activity: "Lightning Review: Review all R&W rules and Math formulas", resource: "Erica Meltzer Guides / Math Formula Sheet", rationale: "Pure Content Recall: Spend zero time on passages or complex solutions. Just confirming content knowledge.", time: "1 hour" },
+                    { day: 18, date: "Mon, Nov 3 - Wed, Nov 5", activity: "Light, Untimed Practice: 10 easy/medium problems daily", resource: "Khan Academy (Medium Level) / Reading for Pleasure", rationale: "Tapering: Maintain mental sharpness without triggering burnout or anxiety.", time: "45 minutes/day" },
+                    { day: 21, date: "Thu, Nov 6", activity: "STOP STUDYING: Pack bag and confirm details", resource: "REST", rationale: "Mental Preparation: Rest is the final, most critical stage of preparation.", time: "15 minutes" },
+                    { day: 22, date: "Fri, Nov 7", activity: "Test Day Eve: Relax and prioritize sleep", resource: "REST", rationale: "Ensure maximum mental clarity for peak performance on test day.", time: "0 minutes (REST)" }
+                ]
+            }
+        };
+
+        const container = document.getElementById('plan-container');
+        const tabs = {
+            week1: document.getElementById('tab-week1'),
+            week2: document.getElementById('tab-week2'),
+            week3: document.getElementById('tab-week3')
+        };
+
+        function renderWeek(weekKey) {
+            container.innerHTML = '';
+            const weekData = studyPlan[weekKey];
+            
+            const weekHtml = `
+                <div id="${weekKey}" class="week-content">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800">${weekData.title}</h2>
+                        <p class="mt-2 text-md text-gray-600 max-w-2xl mx-auto">${weekData.intro}</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${weekData.days.map((day, index) => `
+                            <div class="task-card bg-white rounded-xl shadow-lg p-6 flex flex-col justify-between hover:shadow-xl transition-shadow duration-300">
+                                <div>
+                                    <div class="flex justify-between items-start mb-4">
+                                        <div>
+                                            <p class="font-bold text-blue-600">Day ${day.day}</p>
+                                            <p class="text-sm text-gray-500">${day.date}</p>
+                                        </div>
+                                        <div class="flex items-center space-x-2">
+                                            <span class="text-sm font-medium text-gray-600">${day.time}</span>
+                                            <input type="checkbox" class="h-5 w-5 rounded text-blue-500 focus:ring-blue-400 border-gray-300 task-checkbox" data-day="${weekKey}-${index}">
+                                        </div>
+                                    </div>
+                                    <h3 class="text-lg font-semibold text-gray-900 mb-2 activity-title">${day.activity}</h3>
+                                    <p class="text-sm text-gray-700 details-text"><span class="font-medium">Resource:</span> ${day.resource}</p>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="text-blue-500 hover:text-blue-700 font-semibold text-sm toggle-details">Show Focus ▼</button>
+                                    <div class="details-content text-sm text-gray-600 bg-gray-50 rounded-md mt-2">
+                                        <p><span class="font-semibold">Rationale:</span> ${day.rationale}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            container.innerHTML = weekHtml;
+            attachEventListeners();
+        }
+
+        function attachEventListeners() {
+            document.querySelectorAll('.toggle-details').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const content = e.target.nextElementSibling;
+                    content.classList.toggle('open');
+                    e.target.textContent = content.classList.contains('open') ? 'Hide Focus ▲' : 'Hide Focus ▼';
+                });
+            });
+
+            document.querySelectorAll('.task-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', (e) => {
+                    const card = e.target.closest('.task-card');
+                    if (e.target.checked) {
+                        card.classList.add('completed');
+                    } else {
+                        card.classList.remove('completed');
+                    }
+                });
+            });
+        }
+
+        Object.keys(tabs).forEach(key => {
+            tabs[key].addEventListener('click', () => {
+                Object.values(tabs).forEach(t => t.classList.remove('active'));
+                tabs[key].classList.add('active');
+                renderWeek(key);
+            });
+        });
+
+        renderWeek('week1');
+
+    </script>
+</body>
+</html>
